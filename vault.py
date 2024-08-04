@@ -185,7 +185,7 @@ def login():
         print("Error",e)
 
     # First time login
-    if(res==None and res1==None):
+    if(res==[] and res1==[]):
         auth_onetime=getpass.getpass(prompt="Initial Setup...\nEnter a password for your vault\n")
         obj=SHA256.new(bytes(auth_onetime, 'utf-8'))
         hashed=obj.hexdigest()
